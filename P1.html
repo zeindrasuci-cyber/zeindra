@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSchool - Wujudkan Sekolah Bersih & Hijau</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-green: #2d6a4f;
+            --light-green: #95d5b2;
+            --dark-green: #1b4332;
+            --accent-yellow: #ffca28;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 15px 0;
+        }
+        .navbar-brand {
+            color: var(--primary-green) !important;
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .title-underline {
+            width: 80px;
+            height: 4px;
+            background: var(--primary-green);
+            margin: 20px auto;
+        }
+
+        /* Stats Counter */
+        .stats-box {
+            background: var(--primary-green);
+            color: white;
+            padding: 40px 0;
+        }
+
+        /* Card Customization */
+        .card-program {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .card-program:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--light-green);
+            color: var(--dark-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+
+        /* Gallery Overlay */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background: var(--dark-green);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        footer {
+            background: #111;
+            color: #ccc;
+            padding: 50px 0 20px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section-padding { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-seedling me-2"></i>ECOSCHOOL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="mb-4">Membangun Karakter Melalui Lingkungan Bersih</h1>
+                    <p class="fs-5 mb-5">Kebersihan bukan sekadar kewajiban, tapi budaya. Mari ciptakan lingkungan sekolah yang sehat, nyaman, dan menginspirasi untuk belajar.</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a href="#program" class="btn btn-success btn-lg px-4">Lihat Program</a>
+                        <a href="#about" class="btn btn-outline-light btn-lg px-4">Pelajari Lebih Lanjut</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow" alt="Tentang Kami">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="text-uppercase">Visi & Misi Kami</h2>
+                    <div class="title-underline ms-0"></div>
+                    <p class="text-muted mb-4">Kami percaya bahwa lingkungan yang bersih adalah fondasi utama dalam menciptakan suasana belajar yang kondusif bagi siswa dan guru.</p>
+                    <div class="d-flex mb-3">
+                        <div class="text-success me-3"><i class="fas fa-check-circle fa-2x"></i></div>
+                        <div>
+                            <h5>Edukasi Berkelanjutan</h5>
+                            <p>Mengajarkan siswa pentingnya memilah sampah sejak dini.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="text-success me-3"><i class="fas fa-check-circle fa-2x"></i></div>
+                        <div>
+                            <h5>Zero Waste Campus</h5>
+                            <p>Mengurangi penggunaan plastik sekali pakai di area kantin dan sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-box text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-3">
+                    <h2 class="fw-bold">50+</h2>
+                    <p>Tempat Sampah Terpisah</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <h2 class="fw-bold">1.200</h2>
+                    <p>Pohon Ditanam</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <h2 class="fw-bold">15</h2>
+                    <p>Duta Lingkungan</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <h2 class="fw-bold">100%</h2>
+                    <p>Bebas Sampah Plastik</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="program" class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="text-uppercase">Program Unggulan</h2>
+            <div class="title-underline"></div>
+            <p class="text-muted mb-5">Inisiatif nyata kami untuk menjaga keasrian sekolah setiap harinya.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-program h-100 p-4">
+                        <div class="icon-circle"><i class="fas fa-recycle"></i></div>
+                        <h4>Bank Sampah Digital</h4>
+                        <p class="text-muted">Setiap tabungan sampah anorganik siswa dicatat secara digital dan dapat ditukar dengan perlengkapan sekolah.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-program h-100 p-4">
+                        <div class="icon-circle"><i class="fas fa-leaf"></i></div>
+                        <h4>Kompos Mandiri</h4>
+                        <p class="text-muted">Mengolah sampah daun dan sisa makanan menjadi pupuk organik untuk taman sekolah.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-program h-100 p-4">
+                        <div class="icon-circle"><i class="fas fa-water"></i></div>
+                        <h4>Hemat Air & Energi</h4>
+                        <p class="text-muted">Sistem penghematan air wastafel dan penggunaan lampu hemat energi di setiap kelas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="contact-info">
+                        <h3>Hubungi Kami</h3>
+                        <p class="mb-4">Punya saran atau ingin bekerja sama dalam program lingkungan?</p>
+                        <div class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-3"></i>
+                            <span>Jl. Pendidikan No. 123, Kota Hijau</span>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-envelope me-3"></i>
+                            <span>info@ecoschool.sch.id</span>
+                        </div>
+                        <div class="mb-4 d-flex align-items-center">
+                            <i class="fas fa-phone me-3"></i>
+                            <span>(021) 8888-9999</span>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="bg-white p-4 rounded-4 shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" placeholder="Nama Anda">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="email@contoh.com">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pesan</label>
+                            <textarea class="form-control" rows="4" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                        </div>
+                        <button class="btn btn-success px-5 py-2">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white mb-3">ECOSCHOOL</h5>
+                    <p>Bersama mewujudkan generasi sadar lingkungan untuk masa depan bumi yang lebih baik.</p>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <h5 class="text-white mb-3">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-decoration-none text-secondary">Beranda</a></li>
+                        <li><a href="#about" class="text-decoration-none text-secondary">Tentang</a></li>
+                        <li><a href="#program" class="text-decoration-none text-secondary">Program</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 text-end">
+                    <h5 class="text-white mb-3">Berlangganan Newsletter</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email Anda">
+                        <button class="btn btn-success">Daftar</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="text-center small mb-0">&copy; 2024 EcoSchool Indonesia. Dikembangkan dengan Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
